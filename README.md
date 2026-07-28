@@ -1,4 +1,4 @@
-# 1930 Dutch East Indies Census with Shapefile
+# Dutch East Indies Census and Administrative Boundaries, 1930
 
 This repository contains a harmonized, lowest-level administrative-unit
 dataset from the [1930 Dutch East Indies census](https://en.wikipedia.org/wiki/1930_Dutch_East_Indies_census)
@@ -24,7 +24,7 @@ If you use this data, please cite:
 
 ```bibtex
 @dataset{bounadi_2026_dutch_east_indies_census,
-  title   = {1930 Dutch East Indies Census with Shapefile},
+  title   = {Dutch East Indies Census and Administrative Boundaries, 1930},
   author  = {Bounadi, Monir},
   year    = {2026},
   version = {1.0}
