@@ -18,7 +18,7 @@ Initial public release, July 28, 2026.
   <img src="assets/native-population-density-1930.png" alt="Map of native population density in the 1930 Dutch East Indies" width="900">
 </p>
 
-<h4 align="center"><em>Native population density in the Dutch East Indies by lowest-level administrative unit, 1930.</em></h4>
+<p align="center"><em>Native population density in the Dutch East Indies by lowest-level administrative unit, 1930.</em></p>
 
 ## Citation
 
