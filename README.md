@@ -68,12 +68,12 @@ Key measurement notes:
 - `adm0`–`adm3` provide a standardized historical hierarchy. Colonial terms
   varied by region, so the original fields are retained alongside it.
 
-  | Field | Meaning |
-  |---|---|
-  | `adm0` | Broad island or census-region grouping |
-  | `adm1` | Province, residency, or government |
-  | `adm2` | Regency or division |
-  | `adm3` | Lowest-level census unit: district or subdivision |
+  | Field | Meaning | Distinct units |
+  |---|---|---:|
+  | `adm0` | Broad island or census-region grouping | 3 |
+  | `adm1` | Province, residency, or government | 22 |
+  | `adm2` | Regency or division | 147 |
+  | `adm3` | Lowest-level census unit: district or subdivision | 691 |
 
 - Java and Madura use `province`–`regency`–`district`; Sumatra and the outer
   islands use `residency` or `government`–`division`–`subdivision`.

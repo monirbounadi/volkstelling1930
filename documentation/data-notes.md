@@ -20,12 +20,12 @@ colonial administrative terms differed. The original source fields (`islands`,
 `province`, `residency`, `government`, `regency`, `division`, `district`, and
 `subdivision`) are retained for auditability.
 
-| Field | Historical level | Typical source term |
-|---|---|---|
-| `adm0` | Broad census region | Island or island group |
-| `adm1` | First level | Province, residency, or government |
-| `adm2` | Second level | Regency or division |
-| `adm3` | Lowest level | District or subdivision |
+| Field | Historical level | Typical source term | Distinct units |
+|---|---|---|---:|
+| `adm0` | Broad census region | Island or island group | 3 |
+| `adm1` | First level | Province, residency, or government | 22 |
+| `adm2` | Second level | Regency or division | 147 |
+| `adm3` | Lowest level | District or subdivision | 691 |
 
 For example, Java and Madura records commonly follow province–regency–district
 hierarchies. In other regions, the equivalent levels may be recorded as
