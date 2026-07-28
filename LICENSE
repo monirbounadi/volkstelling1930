@@ -1,0 +1,23 @@
+CC0 1.0 Universal
+
+This dataset is released under the Creative Commons CC0 1.0 Universal
+public-domain dedication.
+
+To the extent possible under law, Monir Bounadi waives all copyright and
+related or neighbouring rights to the original tabular data compilation,
+documentation, and code assembled for this release.
+
+You may copy, modify, distribute, and use the dataset, including for
+commercial purposes, without asking permission.
+
+Exclusion: this dedication does not apply to `data/spatial/map1930.*`, whose
+base geometry is derived from GADM 4.0 and remains subject to the GADM licence.
+Do not redistribute those spatial files without GADM's prior permission.
+
+Official license text:
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Scientific citation is appreciated:
+
+Bounadi, Monir. Dutch East Indies Census, 1930: Lowest-Level Administrative
+Population Data and Historical Boundaries. Version 1.0. 2026.
