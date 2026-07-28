@@ -32,6 +32,12 @@ hierarchies. In other regions, the equivalent levels may be recorded as
 residency or government, division, and subdivision. These are historical
 administrative designations, not a uniform modern Indonesian hierarchy.
 
+| Census region | First level | Second level | Lowest level |
+|---|---|---|---|
+| Java and Madura | `province` | `regency` | `district` |
+| Sumatra | `residency` or `government` | `division` | `subdivision` |
+| Borneo, Celebes, Lesser Sunda Islands, and Moluccas | `residency` or `government` | `division` | `subdivision` |
+
 ## Population categories
 
 `nativemen`, `nativewomen`, and `nativetotal` reproduce the source census's
@@ -43,6 +49,23 @@ classifications, not present-day identities or analytically neutral groups.
 The `total` fields are the corresponding all-category totals. A small number
 of source-cell corrections and historical-name normalizations were made in the
 original construction workflow.
+
+## Source totals and estimates
+
+`total` preserves the all-category total printed in the census table. The
+source is not arithmetically additive in three rows, and the release preserves
+those source values rather than imputing a correction.
+
+- For Hollandia and Zuid-Nieuw-Guinee, the census footnote states that Native
+  totals include persons in areas for which only a rough estimate was possible.
+  Their Native and all-category totals therefore need not equal the sums of the
+  reported male and female counts.
+- For Palembang, the printed all-category total (109,187) agrees with the four
+  population-category totals but not with the printed male and female totals
+  (which sum to 110,987). This is an inconsistency in the source table.
+
+Do not impose arithmetic equality across sex-specific, category-specific, and
+all-category totals for these three rows.
 
 ## Spatial data and matching
 

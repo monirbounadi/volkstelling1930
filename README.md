@@ -53,6 +53,9 @@ remaining-island records are project transcriptions of the original census
 tables. This release harmonizes names, administrative hierarchy, and stable
 map identifiers across these components.
 
+Values are retained as printed. A small number of original census rows are not
+arithmetically additive; see `documentation/data-notes.md`.
+
 The atlas map sheets were georeferenced in QGIS and their historical
 administrative boundaries were manually digitized (on-screen traced). The
 source maps are in *Grote Atlas van Nederlands Oost-Indië* (2003), pp. 70,
@@ -72,6 +75,8 @@ Key measurement notes:
   | `adm2` | Regency or division |
   | `adm3` | Lowest-level census unit: district or subdivision |
 
+- Java and Madura use `province`–`regency`–`district`; Sumatra and the outer
+  islands use `residency` or `government`–`division`–`subdivision`.
 - `nativetotal` is the Native-category population count used in the map.
 - `AREA_2` and `CODE_2` form the stable join key between the census file and
   the boundary layer.
