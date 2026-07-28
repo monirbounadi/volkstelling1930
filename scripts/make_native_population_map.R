@@ -1,16 +1,15 @@
 #!/usr/bin/env Rscript
 
 # Publication-quality native-population-density map.
-# Required packages: sf, dplyr, ggplot2, viridis, scales.
+# Required packages: sf, dplyr, ggplot2, scales.
 
-required <- c("sf", "dplyr", "ggplot2", "viridis", "scales")
+required <- c("sf", "dplyr", "ggplot2", "scales")
 missing <- required[!vapply(required, requireNamespace, logical(1), quietly = TRUE)]
 if (length(missing)) stop("Install required R packages: ", paste(missing, collapse = ", "))
 
 library(sf)
 library(dplyr)
 library(ggplot2)
-library(viridis)
 library(scales)
 
 repo_root <- normalizePath(getwd())
@@ -50,9 +49,11 @@ x_pad <- (bounds$xmax - bounds$xmin) * 0.055
 y_pad <- (bounds$ymax - bounds$ymin) * 0.07
 
 plot <- ggplot(map_units) +
-  geom_sf(aes(fill = natives_per_km2), colour = "white", linewidth = 0.05) +
-  scale_fill_viridis_c(
-    option = "C",
+  geom_sf(aes(fill = natives_per_km2), colour = "#f8fbff", linewidth = 0.04) +
+  # A quiet, light-to-dark sequential palette (ColorBrewer YlGnBu): lower
+  # density recedes while the densely populated units remain legible.
+  scale_fill_gradientn(
+    colours = c("#edf8b1", "#c7e9b4", "#7fcdbb", "#41b6c4", "#225ea8", "#081d58"),
     trans = "log10",
     limits = c(1, 8000),
     oob = squish,
