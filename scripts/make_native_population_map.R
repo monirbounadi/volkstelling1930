@@ -64,8 +64,8 @@ plot <- ggplot(map_units) +
       title.position = "top",
       title.hjust = 0,
       label.position = "bottom",
-      barwidth = grid::unit(50, "lines"),
-      barheight = grid::unit(0.7, "lines")
+      barwidth = grid::unit(32, "lines"),
+      barheight = grid::unit(0.9, "lines")
     )
   ) +
   coord_sf(
@@ -78,10 +78,10 @@ plot <- ggplot(map_units) +
     legend.position = "bottom",
     legend.justification = "center",
     legend.box.margin = margin(t = 10, r = 0, b = 0, l = 0),
-    legend.title = element_text(size = 9, colour = "#202020"),
-    legend.text = element_text(size = 9, colour = "#202020"),
+    legend.title = element_text(size = 12, colour = "#202020"),
+    legend.text = element_text(size = 10, colour = "#202020"),
     plot.margin = margin(8, 12, 8, 12)
   )
 
 ggsave(file.path(assets_dir, "native-population-density-1930.png"), plot,
-       width = 15, height = 7.8, dpi = 600, bg = "white")
+       width = 7.5, height = 3.9, dpi = 240, bg = "white")
