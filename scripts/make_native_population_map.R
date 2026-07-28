@@ -43,10 +43,11 @@ map_units <- boundaries |>
     natives_per_km2 = nativetotal / area_km2
   )
 
-# A small buffer keeps the outer islands visibly inside the frame.
+# A generous buffer prevents the outer islands from feeling pressed against the
+# frame when the figure is rendered at README scale.
 bounds <- st_bbox(map_units)
-x_pad <- (bounds$xmax - bounds$xmin) * 0.025
-y_pad <- (bounds$ymax - bounds$ymin) * 0.045
+x_pad <- (bounds$xmax - bounds$xmin) * 0.065
+y_pad <- (bounds$ymax - bounds$ymin) * 0.085
 
 plot <- ggplot(map_units) +
   geom_sf(aes(fill = natives_per_km2), colour = "white", linewidth = 0.05) +
@@ -70,8 +71,7 @@ plot <- ggplot(map_units) +
   coord_sf(
     xlim = c(bounds$xmin - x_pad, bounds$xmax + x_pad),
     ylim = c(bounds$ymin - y_pad, bounds$ymax + y_pad),
-    expand = FALSE,
-    clip = "off"
+    expand = FALSE
   ) +
   theme_void() +
   theme(
@@ -84,4 +84,4 @@ plot <- ggplot(map_units) +
   )
 
 ggsave(file.path(assets_dir, "native-population-density-1930.png"), plot,
-       width = 14, height = 7.3, dpi = 600, bg = "white")
+       width = 15, height = 7.8, dpi = 600, bg = "white")
