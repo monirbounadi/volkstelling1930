@@ -62,7 +62,16 @@ the [National Archives of the Netherlands](https://www.nationaalarchief.nl/onder
 
 Key measurement notes:
 
-- `adm3` is the lowest-level census unit.
+- `adm0`–`adm3` provide a standardized historical hierarchy. Colonial terms
+  varied by region, so the original fields are retained alongside it.
+
+  | Field | Meaning |
+  |---|---|
+  | `adm0` | Broad island or census-region grouping |
+  | `adm1` | Province, residency, or government |
+  | `adm2` | Regency or division |
+  | `adm3` | Lowest-level census unit: district or subdivision |
+
 - `nativetotal` is the Native-category population count used in the map.
 - `AREA_2` and `CODE_2` form the stable join key between the census file and
   the boundary layer.

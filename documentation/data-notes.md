@@ -13,6 +13,25 @@ These are the units for which a census population record was matched to the
 historical administrative geography. They are not modern Indonesian
 administrative units.
 
+## Geographic hierarchy
+
+`adm0`–`adm3` standardize the historical hierarchy across regions, whose
+colonial administrative terms differed. The original source fields (`islands`,
+`province`, `residency`, `government`, `regency`, `division`, `district`, and
+`subdivision`) are retained for auditability.
+
+| Field | Historical level | Typical source term |
+|---|---|---|
+| `adm0` | Broad census region | Island or island group |
+| `adm1` | First level | Province, residency, or government |
+| `adm2` | Second level | Regency or division |
+| `adm3` | Lowest level | District or subdivision |
+
+For example, Java and Madura records commonly follow province–regency–district
+hierarchies. In other regions, the equivalent levels may be recorded as
+residency or government, division, and subdivision. These are historical
+administrative designations, not a uniform modern Indonesian hierarchy.
+
 ## Population categories
 
 `nativemen`, `nativewomen`, and `nativetotal` reproduce the source census's
