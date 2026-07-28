@@ -64,7 +64,7 @@ plot <- ggplot(map_units) +
       title.position = "top",
       title.hjust = 0,
       label.position = "bottom",
-      barwidth = grid::unit(18, "lines"),
+      barwidth = grid::unit(50, "lines"),
       barheight = grid::unit(0.7, "lines")
     )
   ) +

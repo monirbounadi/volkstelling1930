@@ -1,4 +1,4 @@
-<h2 align="center">Dutch East Indies Census and Administrative Boundaries, 1930</h2>
+## Dutch East Indies Census and Administrative Boundaries, 1930
 
 This repository contains a harmonized, lowest-level administrative-unit
 dataset from the [1930 Dutch East Indies census](https://en.wikipedia.org/wiki/1930_Dutch_East_Indies_census)
@@ -18,7 +18,7 @@ Initial public release, July 28, 2026.
   <img src="assets/native-population-density-1930.png" alt="Map of native population density in the 1930 Dutch East Indies" width="900">
 </p>
 
-<p align="center"><em>Native population density by lowest-level administrative unit, 1930. The map uses the census's historical Native category and boundaries manually digitized from georeferenced census maps.</em></p>
+<h4 align="center"><em>Native population density in the Dutch East Indies by lowest-level administrative unit, 1930.</em></h4>
 
 ## Citation
 
