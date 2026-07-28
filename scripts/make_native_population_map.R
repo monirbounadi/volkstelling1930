@@ -78,7 +78,7 @@ plot <- ggplot(map_units) +
     legend.position = "bottom",
     legend.justification = "center",
     legend.box.margin = margin(t = 10, r = 0, b = 0, l = 0),
-    legend.title = element_text(size = 11, colour = "#202020"),
+    legend.title = element_text(size = 9, colour = "#202020"),
     legend.text = element_text(size = 9, colour = "#202020"),
     plot.margin = margin(8, 12, 8, 12)
   )
