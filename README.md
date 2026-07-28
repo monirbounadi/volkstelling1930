@@ -1,4 +1,4 @@
-# Dutch East Indies Census and Administrative Boundaries, 1930
+<h2 align="center">Dutch East Indies Census and Administrative Boundaries, 1930</h2>
 
 This repository contains a harmonized, lowest-level administrative-unit
 dataset from the [1930 Dutch East Indies census](https://en.wikipedia.org/wiki/1930_Dutch_East_Indies_census)
