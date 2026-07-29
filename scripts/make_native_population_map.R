@@ -63,7 +63,7 @@ plot <- ggplot(map_units) +
     guide = guide_colourbar(
       direction = "horizontal",
       title.position = "top",
-      title.hjust = 0,
+      title.hjust = 0.5,
       label.position = "bottom",
       barwidth = grid::unit(32, "lines"),
       barheight = grid::unit(0.9, "lines")
@@ -76,13 +76,20 @@ plot <- ggplot(map_units) +
   ) +
   theme_void() +
   theme(
+    # The reference's restrained type treatment, retained below the map so the
+    # legend never obscures the small islands in the lower archipelago.
     legend.position = "bottom",
     legend.justification = "center",
-    legend.box.margin = margin(t = 10, r = 0, b = 0, l = 0),
-    legend.title = element_text(size = 12, colour = "#202020"),
-    legend.text = element_text(size = 10, colour = "#202020"),
+    legend.background = element_rect(fill = alpha("#f5f5f2", 0), colour = NA),
+    legend.box.margin = margin(t = 8, r = 0, b = 0, l = 0),
+    legend.title = element_text(family = "Avenir Next", size = 10.5,
+                                colour = "#4e4d47", hjust = 0.5),
+    legend.text = element_text(family = "Avenir Next", size = 8.5,
+                               colour = "#4e4d47"),
+    plot.background = element_rect(fill = "#f5f5f2", colour = NA),
+    panel.background = element_rect(fill = "#f5f5f2", colour = NA),
     plot.margin = margin(8, 12, 8, 12)
   )
 
 ggsave(file.path(assets_dir, "native-population-density-1930.png"), plot,
-       width = 7.5, height = 4.5, dpi = 240, bg = "white")
+       width = 7.5, height = 4.5, dpi = 240, bg = "#f5f5f2")
