@@ -40,13 +40,13 @@ map_units <- boundaries |>
   mutate(
     area_km2 = as.numeric(st_area(geometry)) / 1e6,
     natives_per_km2 = nativetotal / area_km2,
-    # Display values are capped at the published legend endpoints before
-    # assigning the three log-spaced classes.
-    density_display = pmax(pmin(natives_per_km2, 8000), 1),
+    # Display values are capped at the upper legend endpoint before assigning
+    # four ordered density classes.
+    density_display = pmin(natives_per_km2, 8000),
     density_band = cut(
       density_display,
-      breaks = c(1, 20, 400, 8000),
-      labels = c("1–20", "20–400", "400–8,000"),
+      breaks = c(-Inf, 1, 20, 400, 8000),
+      labels = c("≤1", "1–20", "20–400", "400–8,000"),
       include.lowest = TRUE
     )
   )
@@ -60,16 +60,16 @@ y_pad <- (bounds$ymax - bounds$ymin) * 0.07
 plot <- ggplot(map_units) +
   geom_sf(aes(fill = density_band), colour = "#f8fbff", linewidth = 0.04) +
   # Segmented legend and manual colour steps follow the reference map's
-  # treatment, while the breakpoints preserve the original log-spaced anchors.
+  # treatment, while retaining the original density anchors.
   scale_fill_manual(
-    values = c("1–20" = "#b9dfc1", "20–400" = "#41b6c4", "400–8,000" = "#142a68"),
+    values = c("≤1" = "#edf8b1", "1–20" = "#b9dfc1", "20–400" = "#41b6c4", "400–8,000" = "#142a68"),
     name = "Native population density (per km²)",
     guide = guide_legend(
       direction = "horizontal",
       title.position = "top",
       title.hjust = 0.5,
       label.position = "bottom",
-      keywidth = grid::unit(10.7, "lines"),
+      keywidth = grid::unit(8, "lines"),
       keyheight = grid::unit(0.9, "lines"),
       nrow = 1,
       byrow = TRUE
