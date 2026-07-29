@@ -151,7 +151,7 @@ merge m:1 AREA_2 CODE_2 using `census', keep(master match) nogen
 </details>
 
 Run `scripts/make_native_population_map.R` from the repository root to recreate
-the map. Required packages: `sf`, `dplyr`, `ggplot2`, and `scales`.
+the map. Required packages: `sf`, `dplyr`, `ggplot2`, `scales`, and `ragg`.
 
 ## License
 
